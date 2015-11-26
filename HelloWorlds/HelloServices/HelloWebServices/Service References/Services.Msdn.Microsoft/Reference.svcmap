@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="80192934-4f0b-4f94-bf3f-32b0180f22c7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="atoms.xsd" MetadataType="Schema" ID="eee94010-4b3b-4bb3-b0f8-2d6aee55d29d" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_common_default.xsd" />
+    <MetadataFile FileName="atoms1.xsd" MetadataType="Schema" ID="012cbf5a-df7e-489d-82dc-992e7293039d" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_feature_default.xsd" />
+    <MetadataFile FileName="atoms2.xsd" MetadataType="Schema" ID="d4bc8b2f-a1ad-414b-b765-5f587ea587c4" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_primary_default.xsd" />
+    <MetadataFile FileName="urn_msdn_com_public_content_syndication_2006_09_common.xsd" MetadataType="Schema" ID="576a01d1-2a11-431b-a888-344fa4d8ce1d" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_msdn_com_public_content_syndication_2006_09_common.xsd" />
+    <MetadataFile FileName="atoms3.xsd" MetadataType="Schema" ID="361ad04b-7b82-4465-a9ed-3e9965bc797e" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_primary_category_atoms.xsd" />
+    <MetadataFile FileName="default.xsd" MetadataType="Schema" ID="74123636-52ed-4e49-bf79-50fa27605000" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_common_category_default.xsd" />
+    <MetadataFile FileName="atoms4.xsd" MetadataType="Schema" ID="b0e36864-553c-4cf6-8cec-8e11b1b45a67" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_key_atoms.xsd" />
+    <MetadataFile FileName="atoms5.xsd" MetadataType="Schema" ID="5e03df7c-eeb6-4dbc-9740-b6daa627a6d5" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_common_category_atoms.xsd" />
+    <MetadataFile FileName="atoms6.xsd" MetadataType="Schema" ID="9da282bc-3df0-4a9e-8330-59ca7c671065" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_image_category_atoms.xsd" />
+    <MetadataFile FileName="contentservice.wsdl" MetadataType="Wsdl" ID="b6e17dbe-4181-4688-9d69-0d7a2df1a64c" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl" />
+    <MetadataFile FileName="default1.xsd" MetadataType="Schema" ID="983cc1ab-4ca5-4b89-b618-3bacf978540c" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_image_category_default.xsd" />
+    <MetadataFile FileName="atoms7.xsd" MetadataType="Schema" ID="112155a8-4934-4114-b2e0-b022e0ab4640" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_feature_category_atoms.xsd" />
+    <MetadataFile FileName="default2.xsd" MetadataType="Schema" ID="df85288d-6965-483e-ab3e-183fe50ff463" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_feature_category_default.xsd" />
+    <MetadataFile FileName="atoms8.xsd" MetadataType="Schema" ID="b4b8701d-7d82-47aa-9ab0-f92a2f403dc5" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_image_default.xsd" />
+    <MetadataFile FileName="default3.xsd" MetadataType="Schema" ID="03c33425-15cb-4e00-a31d-e6e176d515f6" SourceId="1" SourceUrl="http://services.msdn.microsoft.com/contentservices/schemas/urn_mtpg_com_mtps_2004_1_primary_category_default.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

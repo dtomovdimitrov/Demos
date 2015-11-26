@@ -7,22 +7,41 @@ using System.Threading.Tasks;
 using Catel.IoC;
 using System.Windows;
 using HelloOrchestraFluentRibbon.ViewModels;
+using HelloOrchestraFluentRibbon.Views;
+using Prism.Regions;
+using Fluent;
+using HelloOrchestraFluentRibbon.RegionAdapters;
 
 namespace HelloOrchestraFluentRibbon
 {
-    public class Bootstrapper : BootstrapperBase<MainWindow>, IDisposable
+    public class Bootstrapper : BootstrapperBase<ShellWindow>, IDisposable
     {
-        protected override DependencyObject CreateShell()
+        protected override void ConfigureContainer()
         {
-            var serviceLocator = this.GetServiceLocator();
-            var viewModel = serviceLocator.ResolveType<MainWindowViewModel>();
-            var view = serviceLocator.ResolveType<MainWindow>();
-
-            view.DataContext = viewModel;
-
-            return view;
+            base.ConfigureContainer();
 
             
+        }
+
+        //protected override DependencyObject CreateShell()
+        //{
+        //    var serviceLocator = this.GetServiceLocator();
+        //    var viewModel = serviceLocator.ResolveType<MainWindowViewModel>();
+        //    var view = serviceLocator.ResolveType<MainWindow>();
+
+        //    view.DataContext = viewModel;
+
+        //    return view;
+
+
+        //}
+
+        protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
+        {
+            var mapping = base.ConfigureRegionAdapterMappings();
+            mapping.RegisterMapping(typeof(Ribbon), this.Container.ResolveType<RibbonRegionAdapter>());
+
+            return mapping;
         }
 
         #region IDisposable Support

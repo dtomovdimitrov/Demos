@@ -1,0 +1,62 @@
+﻿<Window x:Class="HelloRestServices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HelloRestServices"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Panoramio RESTfull client"
+        Width="525"
+        Height="350"
+        SnapsToDevicePixels="True"
+        UseLayoutRounding="True"
+        d:DataContext="{x:Type local:ViewModel}"
+        mc:Ignorable="d">
+    <DockPanel LastChildFill="True">
+        <DockPanel.Resources>
+            <local:StringToIntConverter x:Key="StringToIntConverter" />
+        </DockPanel.Resources>
+        <StackPanel Margin="0,10"
+                    DockPanel.Dock="Top"
+                    Orientation="Horizontal">
+            <TextBlock>Requested Pictures:</TextBlock>
+            <TextBox Name="tbRequestedPicturesCount"
+                     MinWidth="50"
+                     Text="30" />
+            <Button Margin="10,0,0,0"
+                    Command="{Binding RequestCommand}"
+                    CommandParameter="{Binding ElementName=tbRequestedPicturesCount,
+                                               Path=Text,
+                                               Converter={StaticResource StringToIntConverter}}">
+                Request
+            </Button>
+        </StackPanel>
+        <StackPanel Margin="0,10"
+                    DockPanel.Dock="Bottom"
+                    Orientation="Horizontal">
+            <TextBlock>Count:</TextBlock>
+            <TextBlock FontWeight="Bold"
+                       Text="{Binding Data.photos.Count}" />
+        </StackPanel>
+        <DataGrid AutoGenerateColumns="False"
+                  ItemsSource="{Binding Data.photos}"
+                  ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding photo_id}"
+                                    Header="Id" />
+                <DataGridTextColumn Binding="{Binding owner_name}"
+                                    Header="Owner" />
+                <DataGridTemplateColumn Width="200"
+                                        Header="Photo">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding photo_file_url}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding upload_date}"
+                                    Header="Uploaded" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
